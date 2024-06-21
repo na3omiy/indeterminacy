@@ -65,7 +65,7 @@ function preload() {
     loadImage("sillabe/cy_6.svg"),
   ];
 
-  macchinetta = loadModel("nuvole/macchinetta tatuaggi.stl", true);
+  macchinetta = loadModel("nuvole/macchinetta_linee.stl", true);
 }
 
 //
@@ -130,12 +130,12 @@ function sillabe() {
 function nuvola() {
   background(0);
 
-  orbitControl();
   push();
   noFill();
-  //let s = height / 150;
   //let c = cos(frameCount);
+  //let s = height / 150;
   //scale(c * c * s);
+  //scale(height / random(20, 200));
   scale(height / 150);
 
   rotateX(frameCount * 0.01);
