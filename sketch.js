@@ -84,7 +84,6 @@ let condition = true;
 
 function draw() {
   background("white");
-  //circle(width / 2, height / 2, width / 2);
 
   nuvola();
   if (condition) {
@@ -141,12 +140,17 @@ function nuvola() {
   rotateX(frameCount * 0.01);
   rotateY(frameCount * 0.01);
   stroke("white");
-  model(macchinetta);
+  //model(macchinetta);
 
-  // macchinetta.vertices.forEach((vertice) => {
-  //   point(vertice.x, vertice.y, vertice.z);
-  // });
-
+  //macchinetta.vertices.forEach((vertice) => {
+  //  point(vertice.x, vertice.y, vertice.z);
+  //});
+  beginShape(POINTS);
+  for (let i = 0; i < macchinetta.vertices.length; i += 10) {
+    let vertice = macchinetta.vertices[i];
+    vertex(vertice.x, vertice.y, vertice.z);
+  }
+  endShape();
   pop();
 }
 
